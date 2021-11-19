@@ -1,0 +1,539 @@
+<html>
+    <head>
+	<title>Tandoori Chicken</title>
+	<link rel="icon" type="image/icon" href="C:\Users\rupak\Desktop\Mystic Aromen\Logo.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <style>
+        body{
+            margin: 0%;
+            padding:0%;
+            background-color:black;  
+        }
+
+	#slider {
+	overflow: hidden;
+}
+#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;
+}
+#slider figure img {
+	width: 20%;
+	float: left;
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}	
+
+.container{
+	position: absolute;
+	top: 165%;
+	left: 58%;
+	transform: translate(-50%,-50%);
+	width: 750px;
+	padding: 30px;
+	background: #fff;
+	box-sizing: border-box;
+	border-radius: 10px;
+	box-shadow: 0 15px 50px rgba(0,0,0,.2);
+}
+
+.circle{
+	width: 200px;
+	height: 200px;
+	background: url(img1.jfif);
+	border-radius: 50%;
+	float: left;
+	shape-outside: circle();
+	margin: 60px 30px 30px 0;
+}
+
+#p1{
+	margin: 0;
+	padding: 0;
+	text-align: justify;
+	line-height: 22px;
+}
+
+#heading1{
+	margin: 0 0 20px;
+	padding: 0;
+	font-size: 30px;
+}
+
+button {
+  transition-duration: 0.4s;
+  width: 30%;
+  height: 40px;
+  position: absolute;
+  left: 35%;
+  top: 275%;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: red;
+  color: white;
+}
+
+.rating{
+  position: absolute;
+  left: 45%;
+  top: 285%;
+  color: white;
+}
+
+.checked {
+  color: orange;
+}
+
+    .btw-text{
+    width:auto;
+    height: 330px;
+    background-color: black;
+    position: absolute;
+    top:316%;
+    left:27%;
+	}
+.btw-text h2{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 80px;
+    text-transform: uppercase;
+    transition: 0.2s;
+    transition-timing-function: ease-in;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+.btw-text h3{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 20px;
+    text-transform: uppercase;
+    transition: 0.2s;
+    transition-timing-function: ease-in;
+    opacity: 0.6;
+    letter-spacing: 1px;
+
+}
+
+.btw-text:hover h2,
+.btw-text:hover h3{
+    color: white;
+    transition: 0.1 s;
+
+    opacity: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container1 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  position: absolute;
+  top: 210%;
+  left: 25%;
+  width: 50%;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+#list2 { width:320px; }
+#list2 ol { font-style:italic; font-family:Georgia, Times, serif; font-size:24px; color:#bfe1f1; }
+#list2 ol li { }
+#list2 ol li p { padding:8px; font-style:normal; font-family:Arial; font-size:17px; color:#eee; border-left: 1px solid #999; }
+#list2 ol li p em { display:block; }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  position: absolute;
+  top: 67%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+}
+
+.wrapper ul {
+  list-style: none;
+}
+
+.wrapper ul li {
+  width: 75px;
+  height: 75px;
+  line-height: 25px;
+  margin: 0 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 5px solid #FFFFFF;
+  float: left;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li .fa {
+  color: #FFFFFF;
+  margin-top: 20px;
+  transition: all 0.5s ease;
+}
+
+/*facebook*/
+.wrapper ul li:hover.facebook {
+  border: 5px solid #3b5998;
+  box-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-facebook {
+  color: #3b5998;
+  text-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+/*twitter*/
+.wrapper ul li:hover.twitter {
+  border: 5px solid #00aced;
+  box-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-twitter {
+  color: #00aced;
+  text-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+/* instagram */
+.wrapper ul li:hover.instagram {
+  border: 5px solid #bc2a8d;
+  box-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-instagram {
+  color: #bc2a8d;
+  text-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+/* google */
+.wrapper ul li:hover.google {
+  border: 5px solid #dd4b39;
+  box-shadow: 0 0 15px #dd4b39;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-google {
+  color: #dd4b39;
+  text-shadow: 0 0 15px #dd4b39;
+  transition: all 0.5s ease;
+}
+
+/* whatsapp */
+.wrapper ul li:hover.whatsapp {
+  border: 5px solid #4dc247;
+  box-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-whatsapp {
+  color: #4dc247;
+  text-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+
+.star-wrapper {
+  top: 295%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  direction: rtl;
+}
+.star-wrapper a {
+  font-size: 4em;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s;
+  margin: 4px;
+}
+.star-wrapper a:hover {
+  color: gold;
+  transform: scale(1.3);
+}
+.s1:hover ~ a {
+  color: gold;
+}
+.s2:hover ~ a {
+  color: gold;
+}
+.s3:hover ~ a {
+  color: gold;
+}
+.s4:hover ~ a {
+  color: gold;
+}
+.s5:hover ~ a {
+  color: gold;
+}
+
+.info {
+   width: 100%;
+   font-size: 30px;
+   text-align: center;
+   font-family: "Consolas";
+   position: absolute;
+   top: 285%;
+   left: 1.5%;
+   color: #FFFD5A;
+}
+
+.marquee {
+    position: absolute;
+    top: 305%;
+    white-space: nowrap;
+    -webkit-animation: rightThenLeft 120s linear;
+    color: white;
+}
+
+@-webkit-keyframes rightThenLeft {
+    0%   {left: 0%;}
+    50%  {left: 50%;}
+    100% {left: 100%;}
+}
+
+#a1 {
+  color: hotpink;
+  font-size: 25px;
+}
+    </style>
+
+
+
+    <body>
+	<div id="slider">
+		<figure>
+			<img src="tc3.jpg">
+			<img src="tc4.jpg">
+			<img src="tc1.jpg">
+			<img src="tc2.jpg">
+			<img src="tc5.jpg">
+		</figure>
+	</div>
+	&nbsp
+	<i><h1 style="color:white;">Ingredients</h1></i>
+	&nbsp
+	<div id="list2">
+   <ol>
+      <li><p><em>Onion</em></p></li>
+      <li><p><em>Garlic</em></p></li>
+      <li><p><em>Ginger</em></p></li>
+      <li><p><em>Paprika</em></p></li>
+	<li><p><em>Ground coriander</em></p></li>
+	<li><p><em>Ground turmeric</em></p></li>
+	<li><p><em>Garam masala</em></p></li>
+	<li><p><em>Kashmiri chili powder</em></p></li>
+	<li><p><em>Lemon juice</em></p></li>
+	<li><p><em>Whole-milk plain yogurt</em>(you can use Greek yogurt, but I prefer the creamier European style yogurt here)</p></li>
+	<li><p><em>Salt</em></p></li>
+	<li><p><em>Chicken legs and/or thighs</em>(whole or boneless and skinless)</p></li>
+   </ol>
+</div>
+	<div class="container">
+		<div class="circle"></div>
+		<h1 id="heading1">Recipe</h1>
+		<p id="p1">
+			Tandoori chicken, a dish of roasted chicken marinated in yogurt and generously spiced, giving the meat its trademark red colour. 
+			It is named for the cylindrical clay oven in which it is cooked, a tandoor. 
+			The dish is attributed to Kundan Lal Gujral, a Hindu from Punjab state who fled newly formed Pakistan after the 1947 
+			partition of India and opened a restaurant in Delhi. 
+			Tandoori chicken quickly became popular throughout South Asia and the Middle East as well as in Western countries.
+			Combine the tandoori paste ingredients in a food processor and process until smooth.
+			In a large bowl, combine the tandoori paste, lemon juice, yogurt, and salt. Add the chicken, toss to coat, and let it marinate for about 30 minutes.
+			Cook the chicken on a grill heated to high heat, in a 450-degree oven, or in your air fryer. High heat is key here. 
+			It quickly caramelizes the dairy sugars in the yogurt marinade. 
+			This creates a crust that seals in the chicken’s natural juices and all that spicy flavor.
+			Serve the chicken with warm paratha or naan or basmati rice and a dish of mint or cilantro chutney on the side.
+		</p>
+		</div>
+	
+	
+
+	<div class="container1">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"> Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Enter your name: ">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email Id</label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="lname" name="lastname" placeholder="Enter your email: ">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+	  <option value="india">India</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+	  <option value="australia">Australia</option>
+	  <option value="france">France</option>
+	  <option value="germany">Germany</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Feedback</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write your feedback: " style="height:200px"></textarea>
+      </div>
+    </div>
+	&nbsp
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+<form action="https://www.swiggy.com/restaurants/tandoori-chicken-corner-ravindra-nagar-rewa-local-rewa-119691" method="get" target="_blank">
+         <button type="submit">Feeling hungry? Order Now!</button>
+      </form>
+
+<div class="star-wrapper">
+  <a class="fas fa-star s1"></a>
+  <a class="fas fa-star s2"></a>
+  <a class="fas fa-star s3"></a>
+  <a class="fas fa-star s4"></a>
+  <a class="fas fa-star s5"></a>
+</div>
+<script src="https://kit.fontawesome.com/5ea815c1d0.js"></script>
+<div class="info">Please give us a rating of our dish!</div>
+
+<hr style="border-radius: 20%; width: 1200px; position: absolute; top: 315%; left: 11%; color: aqua;">
+
+<div class="btw-text">
+            <h2>Contact</h2>
+            <h3> <b>Check us out on our socials for regular updates on our new adventures :)</b></h3>
+	    <p><div class="wrapper">
+  <ul>
+    <li class="facebook"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+    <li class="twitter"><a href="https://twitter.com/login" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+    <li class="instagram"><a href="https://www.instagram.com/accounts/login/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+    <li class="google"><a href="https://www.google.com/" target="_blank"><i class="fa fa-google fa-2x" aria-hidden="true"></i></a></li>
+    <li class="whatsapp"><a href="https://www.whatsapp.com/?lang=en" target="_blank"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></li>
+  </ul>
+</div></p>
+        </div>
+
+<div class="marquee"><a href="https://www.zomato.com/ncr/changezi-chicken-tagore-garden-new-delhi" target="_blank" id="a1">Click here to know the best restaurant for Tandoori Chicken!</a></div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="burger-home.css">
+	
+	<style>
+	a{
+			text-decoration:none;
+			color:white;
+			font-size: 30px;
+			text-align: center;
+	}
+
+	.box-shadow-hover:hover {
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.pointer {
+  cursor: pointer;
+}
+.checked {
+  color: orange;
+  margin-top:5px;
+  margin-bottom:15px;
+}
+.sub-grid{
+display: grid;
+grid-template-columns: auto auto auto;
+grid-template-rows: 300px 300px;
+column-gap: 10px;
+grid-row-gap: 10px;
+}
+.sub-col{
+overflow:hidden;
+position: relative;
+}
+.sub-one{
+grid-row: 1/span 1;
+grid-column: 1/span 1;
+}
+.sub-two{
+grid-row: 1/span 1;
+grid-column: 2/span 1;
+}
+.sub-three{
+grid-row: 1/span 1;
+grid-column: 3/span 1;
+}
+.sub-four{
+grid-row: 2/span 1;
+grid-column: 1/span 1;
+}
+.sub-five{
+grid-row: 2/span 1;
+grid-column: 2/span 1;
+}
+.sub-six{
+grid-row: 2/span 1;
+grid-column: 3/span 1;
+}
+.sub-img{
+width: auto;
+height: 100%;
+opacity: 0.8;
+transform: scale(1.07);
+}
+.sub-col:hover .sub-img{
+transform: scale(1);
+transition: 0.4s;
+opacity: 1;
+transition: ease-in;
+}
+</style>
+</head>
+<body>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="C:\Users\Amogha\Downloads\recipes_image1.jpg" style="width:100%;">
+    <a href="#recepies"><h3 class="text" class="move:hover"><span class="highlight">Recepies</span></h3></a>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2142%2Ftrend20181215042700.jpg" style="width:100%;">
+    <a href="#Restaurants"><div class="text"><span class="highlight">Restaurants</span></div></a>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="https://news.vumc.org/wp-content/uploads/Rating-Scale-iStock1.jpg" style="width:100%;">
+    <a href="#Restaurants"><div class="text"><span class="highlight">Ratings</span></div></a>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<div style="float:left; margin-top: 550px;"><img src="https://media2.giphy.com/media/3o7aD5lNmqChBB5yE0/giphy-downsized-large.gif"></div>
+
+<div style="float:left; margin-left: 50px;">
+
+<div id="recepies">
+	<li>
+		<ul style="color:white;"><h1 style="margin-left:0px;"><span class="box-shadow-hover">What exactly this recipe offers:</span></h1></ul>
+		<div id="description">
+		<span style="color:white;"> Sweet, salty, spicy, and savory. This classic Bombay Veg Sandwich Recipe is filled with flavor that will leave you wanting more! It includes beets, potato, butter, cilantro chutney and is a popular street food in Mumbai. Serve as breakfast or a snack.There are many different sandwich recipes served in Mumbai city. But this popular and delicious veg sandwich was one of my favorites during my college days. Whenever I forgot my lunch box, me and my friends would go to a sandwich stall opposite our college and order customized vegetable sandwiches.
+		Let us jump into the recipe-</span>
+		</div>
+		<div id="ingredients">
+		<ol style="list-style: none;"> 
+			<span style="color:white;"> <h3><span class="box-shadow-hover">Ingredients needed : </span></h3>
+				<ul>
+					<li>Mixed Vegetables: Steamed potatoes, carrots, French beans and green peas make up the bulk of the patty. Garlic, ginger and green chilies (hot peppers) are sautéed and then added to the patty mix for an amazing flavor.</li>
+<li>Spices: I use Indian spices in this burger recipe to flavor the patties, including coriander powder, cumin powder, garam masala powder, red chili powder or cayenne pepper and turmeric powder. These spices combine for a very flavorful patty. You can play around with the combination of these spices and also add your choice of herbs and spices. </li></span>
+
+<span style="color:white;"> <li>Bread: I used fresh whole wheat bread that I got from a local bakery. You can also make homemade bread, if you prefer. Since it takes time to make the veggie burger patty itself, I recommend making the buns in advance.</li>
+<li>Spiced Mayonnaise Dressing: I used an eggless mayonnaise as the base for the dressing in this burger recipe. For a vegan burger use vegan mayonnaise. Spices, lemon juice, vinegar, oil and a bit of sugar is added to the mayonnaise for a custom dressing that complements the veggie burger perfectly.</li></span>
+</ul>
+</ol>
+</div>
+<div id="steps">
+<span style="color:white;"><h3><span class="box-shadow-hover">Steps to prepare: </span></h3></span>
+<span style="color:white;"><ol type="1">
+<li> Rinse 1 cup of tightly packed coriander leaves (cilantro) and 1 to 2 green chillies in fresh water for a few times. Drain all the water.</li>
+<li>Blend or grind the chutney ingredients until smooth. Add 1 or 2 teaspoon of water if it is not blending. I did not add water as there was enough moisture from the rinsed coriander leaves which helped the chutney to blend smoothly.</li>
+<li>mash the vegetables using a masher</li>
+<li>Mix everything well and set aside.</li>
+<li> Making veggie mixture: 
+Heat 1 teaspoon oil in a pan. Add the ginger-garlic-green-chili paste. Sauté for some seconds till the raw aroma of ginger and garlic goes away.</li>
+	</li>
+	<li> Make the size of the veggie patties the same as the size of the bread. If the mixture looks soft or crumbles, then add some more breadcrumbs and mix everything again very well. Cover the veggie patties and set aside.</li>
+	<li>add the mayonise</li>
+	<li>Preparing batter
+ In a medium sized mixing bowl take 3 tablespoons maize flour, polenta or fine cornmeal, 3 tablespoons rice flour and 2 tablespoons gram flour (besan or chickpea flour).</li>
+ 	<li>Place the filling in the bread with green chutney spread all over.</li>
+<li> Serve hot </li> </ol> </span></div>
+</div>
+
+<div id="Restaurants">
+	<li>
+		<ul style="list-style: none;"><li><h1><span class="box-shadow-hover">Restaurants and Reviews</span></h1></li></ul>
+		<span style="color:white; font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;">
+			The top restaurants in bangalore with the best burgers are :-<br>
+			1)Hari Super Sandwich <p>
+
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span></p>
+			
+			2)Cool Joint <p>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span></p>
+			
+			3)Truffles <p>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star "></span>
+			<span class="fa fa-star"></span></p>
+			 
+			4)Glen's Bakehouse <br>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span><br>
+			5)Sandwich House <br>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span>
+	</li>
+</div>
+</div>
+
+<div style="float:right; margin-top:570px;"><img src="https://media2.giphy.com/media/3o7aD5lNmqChBB5yE0/giphy-downsized-large.gif"></div>
+
+<div class="sub-grid" style="float:left; margin-left:100px;">
+<div style="cursor: pointer;" class="sub-col sub-one">
+<div class="sub-img">
+<img src="C:\Users\Amogha\Downloads\hss (1).jpg">
+</div>
+</div>
+<div style="cursor: pointer;" class="sub-col sub-two">
+<div class="sub-img">
+<img src="C:\Users\Amogha\Downloads\cj (1).jpg">
+</div>
+</div>
+<div style="cursor: pointer;" class="sub-col sub-three">
+<div class="sub-img">
+<img src="C:\Users\Amogha\Downloads\truffles1 (1).jpg">
+</div>
+</div>
+<div style="cursor: pointer;" class="sub-col sub-four">
+<div class="sub-img">
+<img src="C:\Users\Amogha\Downloads\glens.jpg">
+</div>
+</div>
+<div style="cursor: pointer;" class="sub-col sub-five">
+<div class="sub-img">
+<img src="C:\Users\Amogha\Downloads\housesand.jpg">
+</div>
+</div>
+<div style="cursor: pointer;" class="sub-col sub-six">
+<div class="sub-img">
+<img src="C:\Users\Amogha\Downloads\sanduimg.jpg">
+</div>
+</div>
+</div>
+
+
+
+
+<div>
+<div id="order" style="float: left; margin-left: 500px;">
+	<li>
+		<ul style="color:white;" >
+		<a href="C:\Users\Amogha\Documents\sub sub page street food\order_now_forms_final.html" target="_blank"><span class="box-shadow-hover">Order now</span></a>
+	</ul>
+	</li>
+</div>
+<div id="Feedback" style="float: left;">
+	<li>
+		<ul style="color:white;">Feedback form</ul>
+		<img src="C:\Users\Amogha\Downloads\feedbackimg.jpg" usemap="#feed">
+		<map name="feed">
+			<area shape="rect"
+			coords="488,187,0,1"
+			href="C:\Users\Amogha\Documents\sub sub page street food\feedback_form.html"
+			alt="rectangle">
+		</map>
+	</li>
+</div>
+</div>
+
+</body>
+<script type="text/javascript" src="burger-home.js"></script>
+</html>

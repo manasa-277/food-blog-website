@@ -1,0 +1,459 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> S'mores </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+</head>
+<style>
+.parallax{ height: 70vh;
+           width: 100%;
+           background-image: url("changed (1).jpg");
+           background-size: cover;
+           background-position: center;
+           display: table;
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+          
+        }
+
+*{      
+        box-sizing: border-box;
+        font-family: 'Lato', sans-serif;
+       
+        }
+
+
+.container{ width: 70%;
+            display: flex;
+           
+            justify-content: space-around;
+           }
+.card{ position: relative;
+       margin-top: 20px;
+       margin-bottom: 20px;
+       width: 300px;
+       height: 370px;
+       transition: 0.3s ease-out;
+       box-shadow: 0.3px 15px rgba(0,0,0,0.7);
+   }
+.card .imgbox{ position: relative;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+      }
+.card .imgbox img{ position: absolute;
+                   top: 0;
+                   left: 0;
+                   width: 100%;
+                   height: 90%;
+                   display: block;
+                   transition: 0.5s; 
+           }
+.card .content{ position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100px;
+                padding: 12px;
+                background: #ff0066;
+                transition: all 0.5s cubic-bezier(.48, -0.28, 0.41, 1.4);
+                box-sizing: border-box;
+                overflow: hidden;
+       } 
+.card:hover .content{ width: 100%;
+                      height: 75%;
+                      left: 0;
+                      bottom: 0;
+          }
+.content p{ margin: 10px 0 0;
+            padding: 1em 1em;
+            transform: tanslateY(2em);
+            line-height: 1.3em;
+            transition: 0.3s;
+            text-align: justify;
+            opacity: 0;
+            letter-spacing: 1px;
+               font-size: 17px;
+               margin-top: 8px;
+               margin-bottom: 2px;
+          }
+.card .content .btn{ text-decoration: none; 
+                  padding: 0.5rem 1rem;
+                  background: #fff;
+                  color: #000;
+                  font-size: 14px;
+                  font-weight: bold;
+                  cursor: poiner;
+                  transition: 0.4s ease-in-out;
+             }
+.card .content .btn:hover{  box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+                    }
+.card:hover .content p{ transform: translateY(0);
+                        opacity: 1;
+                  }
+h2{ text-align: center;
+   }
+
+.card:hover{ box-shadow: 0 0 5em rgba(0, 0, 0, 0.5);
+       }
+
+
+/*  .recipe{ height: 100vh;
+         background-color: black
+          }  */
+
+
+
+ .state tr{
+                height: 165px;
+                text-align: center;
+            }
+            .sn{
+                font-family: "https://fonts.google.com/specimen/Cinzel",Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 30px;
+            }
+            .places{
+                font-family: "https://fonts.google.com/specimen/Inconsolata";
+                font-size: 22px;
+            }
+ @import url('https:fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+.feedback{ position: absolute;
+           top: 415%;
+           left: 34%;
+           width: 450px;
+           background: #000;
+           box-shadow: 0 0 8px rgba(250, 250, 250, 0.6);
+           opacity: 0.6;
+      }
+.feedback form{ width: 100%;
+                text-align: center;
+                padding: 50px 20px;
+            }
+form h1{ padding: 10px 0;
+        }
+form .id{ position: relative;
+         }
+.id i{ position: absolute;
+       font-size: 20px;
+       top: 50%;
+       right: 20px;
+       transform: tranlateY(-50%);
+    }
+form input{ width: 100%;
+            height: 50px;
+            margin: 4px 0;
+            border: 1px solid #5c5c5c;
+            boder-radius: 3px;
+            background: #181717;
+            padding: 0 15px;
+            padding-right: 45px;
+            font-size: 20px;
+      }
+form textarea{ padding: 5px;
+               border: 1px solid #5c5c5c;
+               boder-radius: 3px;
+               background: #181717;
+               font-size: 20px;
+               width: 100%;
+               margin: 4px 0;
+            }
+form button{ margin-top: 5px;
+             border: none;
+             background: #00fff0;
+             color: #222;
+             padding: 10px 0; 
+             width: 100%;
+             font-size: 20px;
+             font-weight: 800;
+             cursor: pointer;
+             border-radius: 3px;
+          
+          }
+form input:focus,
+form textarea:focus{ border: 1px solid #00fff0;
+                     color: #00fff0;
+                     transition: all 0.3s ease;
+             }
+form input:focus::placeholder,
+form textarea:focus::placeholder{ padding-left: 4px;
+                     color: #00fff0;
+                     transition: all 0.3s ease;
+             }
+form input:focus + i{  color: #00fff0;
+                     transition: all 0.3s ease;
+    }
+section{ position: absolute;
+         height: 100%;
+         width: 100%;
+         background: url("https://images.pexels.com/photos/6373846/pexels-photo-6373846.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+         background-position: center;
+         filter: blur(2px) brightness(60%);
+       }  
+
+.div1{
+height :50vh;
+width : 60%;
+background-color : #4a5b5e;
+float : left;
+margin-left: 10px;
+margin-right : 5px;
+margin-top: 10px;
+color: white;
+}
+
+
+.div2{
+height :50vh;
+margin-top: 10px;
+width : 38%;
+background-color : black;
+color: white;
+float : left;
+border-radius: 5px;
+}
+
+.glow{ height: 20vh;
+       bottom: 10px;
+       }
+
+
+.glow > a{
+    text-decoration:none;
+
+    margin: 1px 12px;
+    padding: 10px 30px;
+
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #b0003b;
+    text-transform: uppercase;
+    background-color: black;
+
+    border: 3.5px solid #C71212;
+    border-radius: 27px; 
+
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-delay: 100ms;
+}
+
+  .glow > a:hover{
+    box-shadow: 0px 0px 8px 2px red;
+}   
+
+/*   @import url('https:fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+.feedback{ position: absolute;
+           top: 423%;
+           left: 34%;
+           width: 450px;
+           background: #000;
+           box-shadow: 0 0 8px rgba(250, 250, 250, 0.6);
+           opacity: 0.6;
+      }
+.feedback form{ width: 100%;
+                text-align: center;
+                padding: 60px 30px;
+            }
+form big{ padding: 10px 0;
+        }
+form .id{ position: relative;
+         }
+.id i{ position: absolute;
+       font-size: 20px;
+       top: 46%;
+       right: 20px;
+       transform: tranlateY(-50%);
+    }
+form input{ width: 100%;
+            height: 50px;
+            margin: 4px 0;
+            border: 1px solid #5c5c5c;
+            boder-radius: 3px;
+            background: #181717;
+            padding: 0 15px;
+            padding-right: 45px;
+            font-size: 20px;
+      }
+form textarea{ padding: 5px;
+               border: 1px solid #5c5c5c;
+               boder-radius: 3px;
+               background: #181717;
+               font-size: 20px;
+               width: 100%;
+               margin: 4px 0;
+            }
+form button{ margin-top: 5px;
+             border: none;
+             background: #00fff0;
+             color: #222;
+             padding: 10px 0; 
+             width: 100%;
+             font-size: 20px;
+             font-weight: 800;
+             cursor: pointer;
+             border-radius: 3px;
+          
+          }
+form input:focus,
+form textarea:focus{ border: 1px solid #00fff0;
+                     color: #00fff0;
+                     transition: all 0.3s ease;
+             }
+form input:focus::placeholder,
+form textarea:focus::placeholder{ padding-left: 4px;
+                     color: #00fff0;
+                     transition: all 0.3s ease;
+             }
+form input:focus + i{  color: #00fff0;
+                     transition: all 0.3s ease;
+    }
+
+
+
+
+section{ position: absolute;
+         height: 100%;
+         width: 100%;
+         background: url("https://images.pexels.com/photos/6373846/pexels-photo-6373846.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"); 
+         background-position: center;
+       }
+            */
+             
+
+
+
+</style>       
+               
+
+<body bgcolor="black">
+  
+<div class="parallax">
+    <!--<div class="pcontent">
+          <h2 id="heading1"> Welcome to the world of macaroons </h2>
+          <h2 id="heading2"> Home </h2> -->
+   
+     </div>
+
+<center>
+  
+    <div class="container" style="background-color:black; width: 100%;">
+     
+        <div class="card">
+           <div class="imgbox">
+
+              <img src="srecipe.jpg" alt="Recipe">
+            </div>
+            <div class="content">
+              <h2> Recipe </h2>
+              <p> Now, let's talk marshmallows. Best way to make fluffy vanilla marshmallows. <p>
+              <a href="#Recipe" class="btn"> Read more </a>
+            </div>
+         </div>
+  <div class="card">
+           <div class="imgbox">
+              <img src="feedback2.jpg" alt="Feedback">
+            </div>
+            <div class="content">
+              <h2> Feedback </h2>
+              <p> We would really appreciate it if you would give us a feedback so as to give details about the recipe. <p>
+          <a href="#Feedback" class="btn"> This way </a>
+            </div>
+         </div>
+<div class="card">
+           <div class="imgbox">
+              <img src="restaurant2.jpg" alt="Restaurant">
+            </div>
+            <div class="content">
+              <h2 > Restaurants </h2>
+              <p> Wanna know which restaurants serve the best macaroons? Go right ahead. <p>
+            <a href="#Restaurant" class="btn"> Check out </a>
+            </div>
+         </div>
+
+       </div>
+
+</center>
+<a name="Recipe" style="color:black;"> Recipe </a> 
+<div class="div1" style="font-size: 20px; background-color: #4a5b5e;"> <b><big> Hello there, Ready for S'mores. </big></b> So what are we waiting for, let's just get on with it. <br>
+Prep: 35min  &nbsp &nbsp &nbsp &nbsp Prep: 35min &nbsp &nbsp &nbsp &nbsp  Cook: 10min <br>
+Total: 4hr &nbsp &nbsp &nbsp &nbsp Yield: Approx 2 dozen <br><br>
+<b><big> 1. &nbsp 3 packages unflavored gelatin </big></b> <br>Place the gelatin into the bowl of a stand mixer along with 1/2 cup of the water. Have the whisk attachment standing by. <br><br>
+<b><big> 2. &nbsp 1 cup ice cold water, divided (50 g)</big></b><br>
+In a small saucepan combine the remaining 1/2 cup water, granulated sugar, corn syrup and salt. Place over medium high heat, cover and allow to cook for 3 to 4 minutes.<br><br>
+<b><big> 3. &nbsp 12 ounces granulated sugar </big></b> <br>
+ Turn the mixer on low speed and, while running, slowly pour the sugar syrup down the side of the bowl into the gelatin mixture. Once you have added all of the syrup, increase the speed to high. <br><br>
+</div>
+<div class="div2"><img src="recipe5.jpg" style="width:100%;"></div>
+
+<div class="div1" style="font-size: 20px;  background-color: #4a5b5e;"><b><big> 4. &nbsp 1 cup light corn syrup</big></b><br>
+Combine the confectioners' sugar and cornstarch in a small bowl. Lightly spray a 13 by 9-inch metal baking pan with nonstick cooking spray.<br><br>
+<b><big> 5. &nbsp Half a teaspoon kosher salt</big></b><br>
+When ready, pour the mixture into the prepared pan, using a lightly oiled spatula for spreading evenly into the pan.<br><br>
+<b><big> 6. &nbsp 1 teaspoon vanilla extract</big></b><br>
+Turn the marshmallows out onto a cutting board and cut into 1-inch squares using a pizza wheel dusted with the confectioners' sugar mixture.<br><br>
+<b><big> 7. &nbsp Half a cup confectioners' sugar</big></b><br>
+Combine the confectioners' sugar and cornstarch in a small bowl. Scoop the mixture into a piping bag fitted with a 1/2-inch round piping tip. <br><br></div>
+<div class="div2"><img src="recipe6.jpg" style="width:100%; margin-top: 2px;"></div>
+
+<div class="div1" style="font-size: 20px;  background-color: #4a5b5e;"><b><big> 8. &nbsp Half a cup cornstarch</big></b><br>
+Let the macarons sit at room temperature for 30 minutes to 1 hour, until dry to the touch. Repeat. <br><br>
+<b><big> 9. &nbsp Nonstick spray</big></b><br>
+Pipe the mixture onto the prepared sheet pans lengthwise, leaving about 1-inch between each strip. Sprinkle the tops with enough of the remaining cornstarch and sugar mixture to lightly cover.<br><br>
+<b><big> 10. &nbsp Mixture</big></b><br>
+Cut into 1/2 inch pieces using a pizza wheel or scissors dusted with the confectioners' sugar mixture. Once cut, lightly dust all sides of each marshmallow with the remaining sugar mixture and store in an airtight container for up to a week.<br><br>
+<b><big> 11. &nbsp Last touch</big></b><br>
+Add the vanilla during the last minute of whipping. While the mixture is whipping prepare the pans as follows.<br><br></div>
+<div class="div2"><img src="recipe7.jpg" style="width:100%; margin-top: 2px;">
+</div>
+   
+ <table class="state" style="background-color: black; width:100%; color: white;"><a id="Restaurant" style="color:black;">  Restaurant </a> 
+            <th style="text-align: center; font-family: 'https://fonts.google.com/specimen/Bree+Serif?preview.text=States%20Available%20in&preview.text_type=custom'; font-size: 32PX;" colspan="2"><h2>States Available in</h2></th>
+            <tr>
+                <td> <b class="sn">MAHARASTRA</b> <BR> <p class="places"> Mumbai, Pune, Nagpur, Solapur, Aurangabad</p></td>
+                <td><b class="sn">PUNJAB</b> <br> <p class="places"> Amritsar, Ludhiana, Jalandhar, Bathinda, Patiala</p></td>
+            </tr>
+            <br>
+            <tr>
+                <td><b class="sn">KARNATAKA</b> <br> <p class="places"> Bangalore, Mysore, Dharwad, Mangalore, Bellur, Gulbarga</p></td>
+                <td><b class="sn">ANDHRA PRADESH</b> <br> <p class="places"> Vijayawada, Visakhaptnam, Amaravati, Tirupati</p></td>
+            </tr>
+            <br>
+            <tr>
+                <td><b class="sn">TELANGANA</b> <br> <p class="places"> Hyderabad, Warangal, Karimnagar, Nizamabad, Nalgona</p></td>
+                <td><b class="sn">TAMIL NADU</b> <br> <p class="places"> Chennai, Coimbatore, Madurai, Vellore, Ooty</p></td>
+            </tr>
+        </table>
+<center>
+<div class="glow" style="background-color: #4a0d31;">
+<br><br><br>
+       <a href="https://www.swiggy.com/search?q=Marshmallow" target="_blanck"> Order Now </a>
+    </div>
+<section> </section>
+<div class="feedback"> <a name="Feedback">  Feedback </a> 
+    <form> 
+          <h1 style="color:white;"> Give your Feedback </h1>
+           <div class="id">
+            <input type="text" placeholder="Full name" style=">
+            <i class="far fa-user"></i>
+           </div>
+           <div class="id">
+            <input type="email" placeholder="Email address">
+            <i class="far fa-envelope"></i>
+           </div>
+          <textarea cols="15" rows="5" placeholder="Enter your opinion about S'mores recipe.."></textarea>
+          <button> Send </button>
+</center>
+
+
+
+</body>
+
+
+
+</html>

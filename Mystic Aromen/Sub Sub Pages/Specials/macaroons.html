@@ -1,0 +1,390 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Macaroons </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+</head>
+<style>
+
+.parallax{ height: 70vh;
+           width: 100%;
+           background-image: url("https://lh3.googleusercontent.com/hLN1dqZMZuQ-_DnYIvetPWqvsD7ix0dz_7WMf0HOuAYyD5jnyw7_o53BfvQyLqvylSUcKxbnREkFgnxgbb2AhS_8z533RBz6OsFtcZ6rEk9zlP59iXoJN7vudOi5T9cHKPh6dsEfS5uWbMu9OuhtDUfuTlKlM8qx-aDjXyqnuRLUOjnzyJehuRduAsiNl0Ct_jUY0R0FATQCzafAS_PoeiAYn-K8dsWBIWk4-NrkZZN4PYD51hVOFmyV5nvdPPeWBBIPenaf31ISJr8qmf5LHWuw0khUlZoS1a7evxBdTnv62C9RHIn5kFJgJmBX64ZWNjrezLBLnE_cJQhOFSfAo3Eer8kpzfyn6yt_7jDzZlLxO9N0LzvhgLLYa63-Jg8l9skqzsYvDGJjJlaGZsSWlYXnZM65p3tALTUGgbuxzqb6QzNO8_NjozLoStOUFiC5YXwzBEX9UbuM2vKg1RtohkU-QopCoGQe45ik5xwLAXFJcOJ5CVAuvoorkxEQZNmdDgIdws4ZxiF_ZR1SGdl7iv8Eb63N7vABaW9SciHNQ-abNiqxoVP1LXnNDz4XRotWqBulmspFETVm8Hn4p8JyaiPuBsPcVKv61Ro2w4U46RGHgiC5HLZ9hwdSpWlfPTiQPQJdfBllBihkeCgEFRwOrCRJrBcM7VXdIza-cfJS_9uuQc3BcZthbWkhd_JnZLyVTSNq62cUAlKIfubPQicjxouj=w1245-h830-no?authuser=0");
+           background-size: cover;
+           background-position: center;
+           display: table;
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+          
+        }
+
+
+
+*{      
+        box-sizing: border-box;
+        font-family: 'Lato', sans-serif;
+         
+        }
+
+body{ background-color: black;
+    }
+.wrapper1{ display: flex;
+           width: 70%;
+           justify-content: space-around;
+        }
+.card{ width: 280px;
+        height: 360px;
+        padding: 2rem 1rem;
+        background: #fff;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+        transition: 0.5s ease-in-out;
+    }
+.card:hover{ transform: translateY(20px);
+        }
+.card:before{ content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: block;
+              width: 100%;
+              height: 100;
+              background: linear-gradient(to bottom, rgba(0, 176, 155, 0.5), rgba(150, 201, 61,1));
+              z-index: 2;
+              transition: 0.5s, all;
+              opacity: 0;
+              }
+
+.card:hover:before{ opacity: 1;
+             }
+.card img{ width: 100%;
+           height: 100%;
+           object-fit: cover;
+           position: absolute;
+           top: 0;
+           left: 0;
+       }
+.card .info{ position: relative;
+             z-index: 3;
+             color: #fff;
+             opacity: 0;
+             transform: translateY(30px);
+             transition: 0.5s all;
+          }
+.card:hover .info{ opacity: 1;
+                   transform: translateY(0px);
+         }
+.card .info h1{ margin: 0;
+              }
+.card .info p{ letter-spacing: 1px;
+               font-size: 15px;
+               margin-top: 8px;
+               margin-bottom: 20px;
+          }
+.card .info .btn{ text-decoration: none; 
+                  padding: 0.5rem 1rem;
+                  background: #fff;
+                  color: #000;
+                  font-size: 14px;
+                  font-weight: bold;
+                  cursor: poiner;
+                  transition: 0.4s ease-in-out;
+             }
+.card .info .btn:hover{  box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+                    }
+.div1{
+height :50vh;
+width : 60%;
+background-color : #4a5b5e;
+float : left;
+margin-left: 10px;
+margin-right : 5px;
+margin-top: 10px;
+color: white;
+}
+
+
+.div2{
+height :50vh;
+margin-top: 10px;
+width : 38%;
+background-color : black;
+color: white;
+float : left;
+border-radius: 5px;
+}
+
+ .state tr{
+                height: 165px;
+                text-align: center;
+            }
+            .sn{
+                font-family: "https://fonts.google.com/specimen/Cinzel",Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 30px;
+            }
+            .places{
+                font-family: "https://fonts.google.com/specimen/Inconsolata";
+                font-size: 22px;
+            }
+
+.glow{ height: 20vh;
+       bottom: 10px;
+       }
+
+
+.glow > a{
+    text-decoration:none;
+
+    margin: 1px 12px;
+    padding: 10px 30px;
+
+    font-size: 1.3em;
+    font-weight: bold;
+    color:  #ad2f05;
+    text-transform: uppercase;
+    background-color: black;
+
+    border: 3.5px solid #C71212;
+    border-radius: 27px; 
+
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-delay: 100ms;
+}
+
+  .glow > a:hover{
+    box-shadow: 0px 0px 8px 2px red;
+}   
+
+@import url('https:fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+.feedback{ position: absolute;
+           top: 421%;
+           left: 34%;
+           width: 450px;
+           background: #000;
+           box-shadow: 0 0 8px rgba(250, 250, 250, 0.6);
+           opacity: 0.6;
+      }
+.feedback form{ width: 100%;
+                text-align: center;
+                padding: 60px 30px;
+            }
+form big{ padding: 10px 0;
+        }
+form .id{ position: relative;
+         }
+.id i{ position: absolute;
+       font-size: 20px;
+       top: 46%;
+       right: 20px;
+       transform: tranlateY(-50%);
+    }
+form input{ width: 100%;
+            height: 50px;
+            margin: 4px 0;
+            border: 1px solid #5c5c5c;
+            boder-radius: 3px;
+            background: #181717;
+            padding: 0 15px;
+            padding-right: 45px;
+            font-size: 20px;
+      }
+form textarea{ padding: 5px;
+               border: 1px solid #5c5c5c;
+               boder-radius: 3px;
+               background: #181717;
+               font-size: 20px;
+               width: 100%;
+               margin: 4px 0;
+            }
+form button{ margin-top: 5px;
+             border: none;
+             background: #00fff0;
+             color: #222;
+             padding: 10px 0; 
+             width: 100%;
+             font-size: 20px;
+             font-weight: 800;
+             cursor: pointer;
+             border-radius: 3px;
+          
+          }
+form input:focus,
+form textarea:focus{ border: 1px solid #00fff0;
+                     color: #00fff0;
+                     transition: all 0.3s ease;
+             }
+form input:focus::placeholder,
+form textarea:focus::placeholder{ padding-left: 4px;
+                     color: #00fff0;
+                     transition: all 0.3s ease;
+             }
+form input:focus + i{  color: #00fff0;
+                     transition: all 0.3s ease;
+    }
+
+
+
+
+section{ position: absolute;
+         height: 100%;
+         width: 100%;
+         background: linear-gradient(-30deg, #03a9f4 0%, #3a78b7 50%, #262626 50%, #607d8b 100%); 
+         background-position: center;
+         filter: hue-rotate(120deg);
+         animation: animate 10s linear infinite;
+       }
+@keyframes animate{ 0%
+                   { filter: hue-rotate(0deg);
+                    }
+                   100%
+                   { filter: hue-rotate(360deg);
+                    }
+              }
+
+
+
+
+</style>
+
+
+<body>
+    <div class="parallax">
+       
+          
+      </div>
+    </div>
+<br> <br>
+<center>
+ <div class="wrapper1">
+    <div class="card">
+        <img src="mrecipe.jpg">
+        <div class="info">
+            <h1 style="color:black;"> Recipe </h1>
+            <p style="color:black;"> It’s never a bad time for dessert. Cookies, cake, pie, you name it! But sometimes you need to change it up with something a little fancier: enter macarons </p>
+            <a href="#Recipe" class="btn"> Read more </a>
+           </div>
+        </div>
+    <div class="card">
+        <img src="feedback1.jpg">
+        <div class="info">
+            <h1 style="color:black;"> Feedback </h1>
+            <p style="color:black;"> We would really appreciate it if you would give us a feedback so as to give details about the recipe </p>
+            <a href="#Feedback" class="btn"> This way </a>
+           </div>
+        </div>
+ <div class="card">
+        <img src="restaurant1.jpg">
+        <div class="info">
+            <h1> Restaurants </h1>
+            <p > Wanna know which restaurants serve the best macaroons? Go right ahead. </p>
+            <a href="#Restaurant" class="btn"> Check out </a>
+           </div>
+        </div>
+    </div>
+</center>
+<br> <br>
+
+
+   
+    </div>
+    <div class="recipe">
+     
+    </div>
+
+<div class="div1" style="font-size: 20px;"><a name="Recipe" style="color: #4a5b5e;"> Recipe </a>  <b><big> Hello there, Bold Bakers. </big></b> So what are we waiting for, let's just get on with it. <br>
+Prep: 30min  &nbsp &nbsp &nbsp &nbsp Cook:20min <br>
+Total: 2hr &nbsp &nbsp &nbsp &nbsp Yield: Approx 30 macaroons <br><br>
+<b><big> 1. &nbsp 2cups powdered sugar (200 g)</big></b> <br>In the bowl of a food processor, combine the powdered sugar, almond flour, and ½ teaspoon of salt, and process on low speed, until extra fine. <br><br>
+<b><big> 2. &nbsp Half a cup of granulated sugar (50 g)</big></b><br>
+Gradually add the granulated sugar until fully incorporated. Continue to beat until stiff peaks form <br><br>
+<b><big> 3. &nbsp 1 cup almond flour (95 g), finely ground </big></b> <br>
+ After the last addition of almond flour, continue to fold slowly until the batter falls into ribbons and you can make a figure 8 while holding the spatula up.<br><br>
+</div>
+<div class="div2"><img src="recipe1.jpg" style="width:100%;"></div>
+
+<div class="div1" style="font-size: 20px;"><b><big> 4. &nbsp Half a teaspoon vanilla extract</big></b><br>
+Add the vanilla and beat until incorporated. Add the food coloring and beat until just combined.<br><br>
+<b><big> 5. &nbsp 1 teaspoon salt, divided</big></b><br>
+Place 4 dots of the batter in each corner of a rimmed baking sheet, and place a piece of parchment paper over it, using the batter to help adhere the parchment to the baking sheet.<br><br>
+<b><big> 6. &nbsp 2 drops pink gel food coloring</big></b><br>
+Tap the baking sheet on a flat surface 5 times to release any air bubbles.
+Let the macarons sit at room temperature for 30 minutes to 1 hour, until dry to the touch.<br><br>
+<b><big> 7. &nbsp 3 egg whites, at room temperature</big></b><br>
+Bake the macarons for 17 minutes, until the feet are well-risen and the macarons don’t stick to the parchment paper.<br><br></div>
+<div class="div2"><img src="recipe6.jpg" style="width:100%; margin-top: 2px;"></div>
+
+<div class="div1" style="font-size: 20px;"><b><big> 8. &nbsp 2 sticks, at room temperature </big></b><br>
+Let the macarons sit at room temperature for 30 minutes to 1 hour, until dry to the touch.
+Preheat the oven to 300˚F (150˚C).<br><br>
+<b><big> 9. &nbsp 1 cup unsalted butter (230 g)</big></b><br>
+Make the buttercream: In a large bowl, add the butter and beat with a mixer for 1 minute until light and fluffy. Sift in the powdered sugar and beat until fully incorporated.<br><br>
+<b><big> 10. &nbsp 3 tablespoons heavy cream</big></b><br>
+ransfer the buttercream to a piping bag fitted with a round tip.
+Add a dollop of buttercream to one macaron shell. Top it with another macaron shell to create a sandwich. Repeat with remaining.<br><br>
+<b><big> 11. &nbsp 3 egg whites, at room temperature</big></b><br>
+Bake the macarons for 17 minutes, until the feet are well-risen and the macarons don’t stick to the parchment paper.<br><br></div>
+<div class="div2"><img src="recipe3.jpg" style="width:100%; margin-top: 2px;"></div>
+
+
+
+
+
+   
+<div style="color: white;"> <a name="Restaurant" style="color: black;">  Restaurant </a> 
+<table class="state" style="background-color: black; width:100%;">
+            <th style="text-align: center; font-family: 'https://fonts.google.com/specimen/Bree+Serif?preview.text=States%20Available%20in&preview.text_type=custom'; font-size: 32PX;" colspan="2"><h2>States Available in</h2></th>
+            <tr>
+                <td> <b class="sn">MAHARASTRA</b> <BR> <p class="places"> Mumbai, Pune, Nagpur, Solapur, Aurangabad</p> <br>
+ 
+                <td><b class="sn">PUNJAB</b> <br> <p class="places"> Amritsar, Ludhiana, Jalandhar, Bathinda, Patiala</p></td>
+            </tr>
+            <br>
+            <tr>
+  <br>
+                <td><b class="sn">KARNATAKA</b> <br> <p class="places"> Bangalore, Mysore, Dharwad, Mangalore, Bellur, Gulbarga <br>
+</p></td>
+                <td><b class="sn">ANDHRA PRADESH</b> <br> <p class="places"> Vijayawada, Visakhaptnam, Amaravati, Tirupati</p></td>
+            </tr>
+            <br>
+            <tr>
+                <td><b class="sn">TELANGANA</b> <br> <p class="places"> Hyderabad, Warangal, Karimnagar, Nizamabad, Nalgona</p></td>
+                <td><b class="sn">TAMIL NADU</b> <br> <p class="places"> Chennai, Coimbatore, Madurai, Vellore, Ooty</p></td>
+            </tr>
+        </table>   
+</div>  
+<center>
+
+<div class="glow" style="background-color: #002d36;">
+<br><br><br>
+       <a href="https://www.swiggy.com/search?q=Macaroon" target="_blank"> Order Now </a>
+    </div>
+<section> </section>
+<div class="feedback"> <a name="Feedback">  Feedback </a> 
+    <form> 
+          <b><big style="color: white; margin-bottom: 10px;"> Give your Feedback </big></b>
+          <br>
+           <div class="id">
+            <input type="text" placeholder="Full name">
+            <i class="far fa-user"></i>
+           </div>
+           <div class="id">
+            <input type="email" placeholder="Email address">
+            <i class="far fa-envelope"></i>
+           </div>
+          <textarea cols="15" rows="5" placeholder="Enter your opinion about Macaroons recipe.."></textarea>
+          <button> Send </button>
+</center>
+
+
+
+
+</body>
+</html>
